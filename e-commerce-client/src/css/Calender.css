@@ -1,0 +1,106 @@
+/* Styling the calendar container */
+.calendar-controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    /* width: 1000px; */
+  }
+  
+  /* Styling the calendar buttons */
+  .calendar-controls button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .calendar-controls button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styling the event title and background */
+  .fc-title {
+    font-weight: bold;
+  }
+  .fc-header-toolbar {
+    padding: 20px; /* You can change this value as needed */
+  }
+  /* Change the background color of the navigation buttons */
+.fc-header-button {
+    background-color: #081B2C; /* Change this to your desired color */
+    color: white; /* Change the text color to contrast with the background */
+  }
+  
+  /* Change the background color of the navigation buttons when hovered */
+  .fc-header-button:hover {
+    background-color: darkblue; /* Change this to your desired hover color */
+  }
+  
+  
+  .fc-event {
+    background-color: #081B2C;
+    border: 1px solid #78FD94;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .fc-event:hover {
+    background-color: #78FD94;
+    border: 1px solid #081B2C;
+    color: #081B2C;
+  }
+
+  /* Add this CSS to style the event details popup */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .popup-content {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .popup h3 {
+    margin-top: 0;
+  }
+  
+  .popup p {
+    margin: 10px 0;
+  }
+  
+  .popup button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .popup button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Add more styles as needed to customize the popup appearance */
+  
+  
