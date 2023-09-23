@@ -9,6 +9,7 @@ import { TbReport } from "react-icons/tb";
 import { AiFillSetting } from "react-icons/ai";
 import Home from "./menu/Home";
 import Calendar from "./menu/Calender";
+import OnlineProfile from "./menu/OnlineProfile";
 
 
 
@@ -100,6 +101,9 @@ function Panel() {
         )}
          {activeButton==="calenderButton"&&(
          <Calendar id={id}/>
+        )}
+         {activeButton==="profileButton"&&(
+         <OnlineProfile id={id}/>
         )}
         </div>
       </div>
