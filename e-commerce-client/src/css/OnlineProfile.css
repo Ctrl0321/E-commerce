@@ -1,51 +1,114 @@
-/* OnlineProfile.css */
+.form-container{
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width:90%;
+  margin: 40px auto;
+  padding:30px ;
+  /* box-shadow: 11px 12px 13px 12px rgb(207, 207, 207); */
+  /* background-color: #ededed; */
+  font-family: 'Rubik', sans-serif;
+  letter-spacing: 1px;
+ 
+}
+.input-fields{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 20px; 
+  justify-content: center;
+}
 
-/* Create a grid container for the form */
-.form-container {
-    width: 90%;
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px; */
-  }
+.form-fields{ 
+  text-align: left; 
+  margin-left: 50px;
+  margin-bottom: 5px; 
+  display: flex;
+  flex-direction: column;
+
+  /* margin-right: 50px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start;  */
+}
+
+.form-fields > label{
+  /* display: block; */
+  padding-bottom: 5px;
+  color: #000;
+  font-size: 15px;
+}
+.form-fields > input {
   
-  /* Style for form labels */
-  label {
-    font-weight: bold;
-  }
-  
-  /* Style for form inputs */
+  font-family: 'Rubik', sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  border: none;
+  border: 2px solid #c4c2c2;
+  border-radius: 3px;
+  height: 40px;
+  padding: 0 80px;
+  margin: 4px;
+  /* width:250px; */
+  /* max-width: 100%; */
+  outline: none;
+}
+.form-fields-courts input{
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  border: none;
+  border: 2px solid #c4c2c2;
+  border-radius: 3px;
+  width: auto;
+  height: 40px;
+  margin: 4px;
+  margin-top: 7px;
+}
+
   input[type="text"],
   input[type="number"],
   input[type="time"] {
-    width: 40%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display:inline-block;
+    margin-left: 10px;
   }
-  
-  /* Style for the "Add Court" and "Remove" buttons */
-  button[type="button"] {
-    background-color: #007bff;
+  .remove-btn{
     color: #fff;
-    border: none;
+    background-color: #df0d22;
+    border:none;
     border-radius: 4px;
     padding: 5px 10px;
     cursor: pointer;
+    margin: 5px 5px 5px 15px;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 1px;
   }
-  
-  /* Style for the submit button */
-  button[type="submit"] {
+  .form-container > button {
+    font-family: 'Rubik', sans-serif;
+    padding: 12px 10px;
+    border: 0;
     background-color: #28a745;
+    width: 20%;
+    border-radius: 3px;
+    margin-top: 80px;
     color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
+    letter-spacing: 1px;
     cursor: pointer;
-    grid-column: span 2; /* Span across both columns */
   }
   
-  /* Style for the "Remove" button on court items */
-  button[type="button"].court-remove {
-    background-color: #dc3545;
+  .button-add{
+      background-color: #0b0b0b;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 3px 0px;
+      cursor: pointer;
+      margin-top: 20px;
+      margin-left: 10px;
+      font-family: 'Rubik', sans-serif;
+      letter-spacing: 1px;
+      width: 20%;
+      font-weight: 600;
+      font-size: larger;
+
   }
-  

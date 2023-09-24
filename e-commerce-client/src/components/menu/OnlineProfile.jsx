@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../../css/OnlineProfile.css'
+import '../../css/OnlineProfile.css';
+import { AiFillDelete } from "react-icons/ai";
+import { GrFormAdd } from "react-icons/gr";
+
+
+
 
 const OnlineProfile=(props)=> {
   const apiPort = process.env.REACT_APP_PORT_KEY;
@@ -20,7 +25,7 @@ const OnlineProfile=(props)=> {
     pricePerHour: '',
     courts: [{courtName:''}],
   });
-
+ console.log("form data",formData)
   useEffect(() => {
     axios
       .get(`${apiPort}/futsal/courts/${props.id}`)
@@ -96,7 +101,9 @@ const OnlineProfile=(props)=> {
 
   return (
     <form onSubmit={handleSubmit} className="form-container">
-      <div>
+     <div className='input-fields'>
+
+     <div className='form-fields'>
         <label>Name:</label>
         <input
           type="text"
@@ -105,7 +112,7 @@ const OnlineProfile=(props)=> {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className='form-fields'>
         <label>Address:</label>
         <input
           type="text"
@@ -114,7 +121,7 @@ const OnlineProfile=(props)=> {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className='form-fields'>
         <label>Place:</label>
         <input
           type="text"
@@ -123,7 +130,7 @@ const OnlineProfile=(props)=> {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className='form-fields'>
         <label>Email:</label>
         <input
           type="text"
@@ -132,7 +139,7 @@ const OnlineProfile=(props)=> {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className='form-fields'>
         <label>Mobile Number:</label>
         <input
           type="text"
@@ -141,7 +148,7 @@ const OnlineProfile=(props)=> {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className='form-fields'>
         <label>Rating:</label>
         <input
           type="number"
@@ -150,7 +157,9 @@ const OnlineProfile=(props)=> {
           onChange={handleChange}
         />
       </div>
-      <div>
+
+      
+      <div className='form-fields'> 
         <label>Start Time:</label>
         <input
           type="time"
@@ -159,7 +168,7 @@ const OnlineProfile=(props)=> {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className='form-fields'>
         <label>End Time:</label>
         <input
           type="time"
@@ -168,7 +177,7 @@ const OnlineProfile=(props)=> {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className='form-fields'>
         <label>Court Type:</label>
         <input
           type="text"
@@ -177,7 +186,7 @@ const OnlineProfile=(props)=> {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className='form-fields'>
         <label>Number of court:</label>
         <input
           type="number"
@@ -186,8 +195,8 @@ const OnlineProfile=(props)=> {
           onChange={handleChange}
         />
       </div>
-      <div>
-        <label>price per hour:</label>
+      <div className='form-fields'> 
+        <label>Price per hour:</label>
         <input
           type="text"
           name="pricePerHour"
@@ -195,25 +204,27 @@ const OnlineProfile=(props)=> {
           onChange={handleChange}
         />
       </div>
-      <div>
+    
+      <div className='form-fields'>
         <label>Courts:</label>
         {formData.courts.map((court, index) => (
-          <div key={index}>
+          <div key={index} className='form-fields-courts'>
             <input
               type="text"
               name="courtName"
               value={court.courtName}
               onChange={(e) => handleCourtChange(e, index)}
             />
-            <button type="button" onClick={() => removeCourt(index)}>
-              Remove
+            <button type="button" onClick={() => removeCourt(index)} className='remove-btn'>
+              <AiFillDelete size={15}/>
             </button>
           </div>
         ))}
-        <button type="button" onClick={addCourt}>
-          Add Court
+        <button type="button" onClick={addCourt} className="button-add">
+          +
         </button>
       </div>
+     </div>
 
       
      
